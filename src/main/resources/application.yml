@@ -1,0 +1,33 @@
+### Spring properties
+# Service registers under this name
+spring:
+  application:
+    name: accounts-service
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+# HTTP Server (Tomcat) Port
+server:
+  port: 8081
+  servlet:
+    context-path: /acc
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled: false
+
+info:
+  app:
+    name: Account
+    description: Account Details
+    version: 1.0.0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
